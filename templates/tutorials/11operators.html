@@ -1,0 +1,64 @@
+{% extends 'layouts/layout.html' %}
+{% block content %}
+{% load static %}
+<!-- Begin page content -->
+<main role="main" class="flex-shrink-0">
+  <div style="padding-left:10px;padding-right: 10px;" class="container-fluid">
+    <div class="row">
+
+      <!-- Left Menu -->
+      {% include 'layouts/left_menu.html' %}
+      <!-- Left Menu ends -->
+
+      <div class="col-md-7 order-md-2">
+
+        <h1 class="display-4">Python Operators</h1>
+
+        <p>Operators are used to perform operations on variables and values.</p>
+        <p>Python divides the operators in the following groups:</p>
+        <ul>
+          <li>Arithmetic operators</li>
+          <li>Assignment operators</li>
+          <li>Comparison operators</li>
+          <li>Logical operators</li>
+          <li>Identity operators</li>
+          <li>Membership operators</li>
+          <li>Bitwise operators</li>
+        </ul>    
+        <h1>Python Arithmetic Operators</h1>  
+        <p>Arithmetic operators are used with numeric values to perform common mathematical operations:</p>   
+        <p><img src="{% static 'images/operators/1.jpg' %}" width="800"></p>
+        
+        <h1>Python Assignment Operators</h1>
+        <p>Assignment operators are used to assign values to variables:</p>
+        <p><img src="{% static 'images/operators/2.jpg' %}" width="800"></p>
+
+        <h1>Python Comparison Operators</h1>
+        <p>Comparison operators are used to compare two values:</p>
+        <p><img src="{% static 'images/operators/3.jpg' %}" width="800"></p>
+
+        <h1>Python Logical Operators</h1>
+        <p>Logical operators are used to combine conditional statements:</p>
+        <p><img src="{% static 'images/operators/4.jpg' %}" width="800"></p>
+
+        <h1>Python Identity Operators</h1>
+        <p>Identity operators are used to compare the objects, not if they are equal, but if they are actually the same object, with the same memory location:</p>
+        <p><img src="{% static 'images/operators/5.jpg' %}" width="800"></p>
+
+        <h1>Python Membership Operators</h1>
+        <p>Membership operators are used to test if a sequence is presented in an object:</p>
+        <p><img src="{% static 'images/operators/6.jpg' %}" width="800"></p>
+
+        <h1>Python Bitwise Operators</h1>
+        <p>Bitwise operators are used to compare (binary) numbers:</p>
+        <p><img src="{% static 'images/operators/7.jpg' %}" width="800"></p>
+      </div>
+
+      <!-- Right advertise -->
+      {% include 'layouts/right_advertise.html' %}
+      <!-- Right advertise ends -->
+
+    </div>
+  </div>
+</main>
+{% endblock %}

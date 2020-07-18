@@ -1,0 +1,395 @@
+{% extends 'layouts/layout.html' %}
+{% block content %}
+{% load static %}
+<!-- Begin page content -->
+<main role="main" class="flex-shrink-0">
+  <div style="padding-left:10px;padding-right: 10px;" class="container-fluid">
+    <div class="row">
+
+      <!-- Left Menu -->
+      {% include 'layouts/left_menu.html' %}
+      <!-- Left Menu ends -->
+
+      <div class="col-md-7 order-md-2">
+
+        <h1 class="display-4">String Literals</h1>
+        <p>String literals in python are surrounded by either single quotation marks, or double quotation
+          marks.</p>
+
+        <p><code>'hello'</code> is the same as <code>"hello"</code>.</p>
+
+        <p>You can display a string literal with the <code>print()</code> function:</p>
+        <h6>Example</h6>
+
+        <p><img src="{% static 'images/strings/1.jpg' %}" width="800"></p>
+
+        <h1 class="display-4">Assign String to a Variable</h1>
+        <p>Assigning a string to a variable is done with the variable name followed by an equal sign and the string:</p>
+        <h6>Example</h6>
+
+        <p><img src="{% static 'images/strings/2.jpg' %}" width="800"></p>
+
+        <h1 class="display-4">Multiline Strings</h1>
+        <p>You can assign a multiline string to a variable by using three quotes:</p>
+        <h6>Example</h6>
+        <span>You can use three double quotes:</span>
+        <p><img src="{% static 'images/strings/3.jpg' %}" width="800"></p>
+
+
+        <p>Or three single quotes:</p>
+        <h6>Example</h6>
+
+        <p><img src="{% static 'images/strings/4.jpg' %}" width="800"></p>
+
+        <h1 class="display-4">Strings are Arrays</h1>
+        <p>Like many other popular programming languages, strings in Python are arrays of bytes representing unicode
+          characters.</p>
+        <p>However, Python does not have a character data type, a single character is simply a string with a length of
+          1.</p>
+        <p>Square brackets can be used to access elements of the string.</p>
+        <h6>Example</h6>
+        <span>Get the character at position 1 (remember that the first character has the position 0):</span>
+        <p><img src="{% static 'images/strings/5.jpg' %}" width="800"></p>
+
+        <h1 class="display-4">Slicing</h1>
+        <p>You can return a range of characters by using the slice syntax.</p>
+        <p>Specify the start index and the end index, separated by a colon, to return a part of the string.</p>
+        <h6>Example</h6>
+        <span>Get the characters from position 2 to position 5 (not included):</span>
+        <p><img src="{% static 'images/strings/6.jpg' %}" width="800"></p>
+
+        <h1 class="display-4">Negative Indexing</h1>
+        <p>Use negative indexes to start the slice from the end of the string:</p>
+        <h6>Example</h6>
+        <span>Get the characters from position 5 to position 1, starting the count from the end of the string:</span>
+        <p><img src="{% static 'images/strings/7.jpg' %}" width="800"></p>
+
+        <h1 class="display-4">String Length</h1>
+        <p>To get the length of a string, use the <code>len()</code> function.</p>
+        <h6>Example</h6>
+        <span>The <code>len()</code> function returns the length of a string:</span>
+        <p><img src="{% static 'images/strings/8.jpg' %}" width="800"></p>
+
+        <h1 class="display-4">String Methods</h1>
+        <p>Python has a set of built-in methods that you can use on strings.</p>
+        <h6>Example</h6>
+        <span>The <code>strip()</code> method removes any whitespace from the beginning or the end:</span>
+        <p><img src="{% static 'images/strings/9.jpg' %}" width="800"></p>
+
+        <h6>Example</h6>
+        <span>The <code>lower()</code> method returns the string in lower case:</span>
+        <p><img src="{% static 'images/strings/10.jpg' %}" width="800"></p>
+
+        <h6>Example</h6>
+        <span>The <code>upper()</code> method returns the string in upper case:</span>
+        <p><img src="{% static 'images/strings/11.jpg' %}" width="800"></p>
+
+        <h6>Example</h6>
+        <span>The <code>replace()</code> method replaces a string with another string:</span>
+        <p><img src="{% static 'images/strings/12.jpg' %}" width="800"></p>
+
+        <h6>Example</h6>
+        <span>The <split>split()</split> method splits the string into substrings if it finds instances of the
+          separator:</span>
+        <p><img src="{% static 'images/strings/13.jpg' %}" width="800"></p>
+
+        <h1 class="display-4">Check String</h1>
+        <p>To check if a certain phrase or character is present in a string, we can use the keywords <code>in</code> or
+          <code>not in</code>.</p>
+        <h6>Example</h6>
+        <span>Check if the phrase "ain" is present in the following text:</span>
+        <p><img src="{% static 'images/strings/14.jpg' %}" width="800"></p>
+
+        <h6>Example</h6>
+        <span>Check if the phrase "ain" is NOT present in the following text:</span>
+        <p><img src="{% static 'images/strings/15.jpg' %}" width="800"></p>
+
+        <h1 class="display-4">String Concatenation</h1>
+        <p>To concatenate, or combine, two strings you can use the + operator.</p>
+        <h6>Example</h6>
+        <span>Merge variable <code>a</code> with variable <code>b</code> into variable <code>c</code>:</span>
+        <p><img src="{% static 'images/strings/16.jpg' %}" width="800"></p>
+
+        <h6>Example</h6>
+        <span>To add a space between them, add a " ":</span>
+        <p><img src="{% static 'images/strings/17.jpg' %}" width="800"></p>
+
+        <h1 class="display-4">String Format</h1>
+        <p>As we learned in the Python Variables chapter, we cannot combine strings and numbers like this:</p>
+        <h6>Example</h6>
+        <p><img src="{% static 'images/strings/18.jpg' %}" width="800"></p>
+        <p>But we can combine strings and numbers by using the <code>format()</code> method!</p>
+        <p>The <code>format()</code> method takes the passed arguments, formats them, and places them in the string
+          where the placeholders <code>{}</code> are:</p>
+
+        <h6>Example</h6>
+        <span>Use the <code>format()</code> method to insert numbers into strings:</span>
+        <p><img src="{% static 'images/strings/19.jpg' %}" width="800"></p>
+        <p>The format() method takes unlimited number of arguments, and are placed into the respective placeholders:</p>
+
+        <h6>Example</h6>
+        <p><img src="{% static 'images/strings/20.jpg' %}" width="800"></p>
+
+        <p>You can use index numbers {0} to be sure the arguments are placed in the correct placeholders:</p>
+        <h6>Example</h6>
+
+        <p><img src="{% static 'images/strings/21.jpg' %}" width="800"></p>
+
+        <h1 class="display-4">Escape Character</h1>
+        <p>To insert characters that are illegal in a string, use an escape character.</p>
+        <p>An escape character is a backslash <code>\</code> followed by the character you want to insert.</p>
+        <p>An example of an illegal character is a double quote inside a string that is surrounded by double quotes:</p>
+        <h6>Example</h6>
+        <p><img src="{% static 'images/strings/22.jpg' %}" width="800"></p>
+
+        <p>To fix this problem, use the escape character <code>\"</code>:</p>
+        <h6>Example</h6>
+        <span>The escape character allows you to use double quotes when you normally would not be allowed:</span>
+        <p><img src="{% static 'images/strings/23.jpg' %}" width="800"></p>
+        
+        <p>Other escape characters used in Python:</p>
+        
+        <table>
+          <tr>
+            <th style="width: 10%;border: 1px solid #dddddd;">Code</th>
+            <th style="width: 10%;border: 1px solid #dddddd;">Result</th>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">\'</td>
+            <td style="border: 1px solid #dddddd;">Single Quote</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">\\</td>
+            <td style="border: 1px solid #dddddd;">Backslash</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">\n'</td>
+            <td style="border: 1px solid #dddddd;">New Line</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">\r</td>
+            <td style="border: 1px solid #dddddd;">Carriage Return</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">\t</td>
+            <td style="border: 1px solid #dddddd;">Tab</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">\b</td>
+            <td style="border: 1px solid #dddddd;">Backspace</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">\f</td>
+            <td style="border: 1px solid #dddddd;">Form Feed</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">\ooo</td>
+            <td style="border: 1px solid #dddddd;">Octal value</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">\xhh</td>
+            <td style="border: 1px solid #dddddd;">Hex value</td>
+          </tr>
+        </table>
+        <hr>
+        <h1>String Methods</h1>
+        <p>Python has a set of built-in methods that you can use on strings.</p>
+        <span>Note: All string methods returns new values. They do not change the original string.</span>
+
+        <table>
+          <tr>
+            <th style="width: 10%;border: 1px solid #dddddd;">Method</th>
+            <th style="width: 10%;border: 1px solid #dddddd;">Description</th>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">capitalize()</td>
+            <td style="border: 1px solid #dddddd;">Converts the first character to upper case</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">casefold()</td>
+            <td style="border: 1px solid #dddddd;">Converts string into lower case</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">casefold()</td>
+            <td style="border: 1px solid #dddddd;">Converts string into lower case</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">center()</td>
+            <td style="border: 1px solid #dddddd;">Returns a centered string</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">count()</td>
+            <td style="border: 1px solid #dddddd;">Returns the number of times a specified value occurs in a string</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">encode()</td>
+            <td style="border: 1px solid #dddddd;">Returns an encoded version of the string</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">endswith()</td>
+            <td style="border: 1px solid #dddddd;">	Returns true if the string ends with the specified value</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">expandtabs()</td>
+            <td style="border: 1px solid #dddddd;">Sets the tab size of the string</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">find()</td>
+            <td style="border: 1px solid #dddddd;">Searches the string for a specified value and returns the position of where it was found</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">format()</td>
+            <td style="border: 1px solid #dddddd;">Formats specified values in a string</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">format_map()</td>
+            <td style="border: 1px solid #dddddd;">Formats specified values in a string</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">index()</td>
+            <td style="border: 1px solid #dddddd;">Searches the string for a specified value and returns the position of where it was found</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">isalnum()</td>
+            <td style="border: 1px solid #dddddd;">Returns True if all characters in the string are alphanumeric</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">isalpha()</td>
+            <td style="border: 1px solid #dddddd;">Returns True if all characters in the string are in the alphabet</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">isdecimal()</td>
+            <td style="border: 1px solid #dddddd;">Returns True if all characters in the string are decimals</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">isdigit()</td>
+            <td style="border: 1px solid #dddddd;">Returns True if all characters in the string are digits</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">isidentifier()</td>
+            <td style="border: 1px solid #dddddd;">Returns True if the string is an identifier</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">islower()</td>
+            <td style="border: 1px solid #dddddd;">	Returns True if all characters in the string are lower case</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">isnumeric()</td>
+            <td style="border: 1px solid #dddddd;">Returns True if all characters in the string are numeric</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">isprintable()</td>
+            <td style="border: 1px solid #dddddd;">Returns True if all characters in the string are printable</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">isspace()</td>
+            <td style="border: 1px solid #dddddd;">Returns True if all characters in the string are whitespaces</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">istitle()</td>
+            <td style="border: 1px solid #dddddd;">Returns True if the string follows the rules of a title</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">isupper()</td>
+            <td style="border: 1px solid #dddddd;">Returns True if all characters in the string are upper case</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">join()</td>
+            <td style="border: 1px solid #dddddd;">Joins the elements of an iterable to the end of the string</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">ljust()</td>
+            <td style="border: 1px solid #dddddd;">Returns a left justified version of the string</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">lower()</td>
+            <td style="border: 1px solid #dddddd;">Converts a string into lower case</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">lstrip()</td>
+            <td style="border: 1px solid #dddddd;">Returns a left trim version of the string</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">maketrans()</td>
+            <td style="border: 1px solid #dddddd;">Returns a translation table to be used in translations</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">partition()</td>
+            <td style="border: 1px solid #dddddd;">Returns a tuple where the string is parted into three parts</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">replace()</td>
+            <td style="border: 1px solid #dddddd;">Returns a string where a specified value is replaced with a specified value</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">rfind()</td>
+            <td style="border: 1px solid #dddddd;">Searches the string for a specified value and returns the last position of where it was found</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">rindex()</td>
+            <td style="border: 1px solid #dddddd;">Searches the string for a specified value and returns the last position of where it was found</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">rjust()</td>
+            <td style="border: 1px solid #dddddd;">Returns a right justified version of the string</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">rpartition()</td>
+            <td style="border: 1px solid #dddddd;">Returns a tuple where the string is parted into three parts</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">rsplit()</td>
+            <td style="border: 1px solid #dddddd;">Splits the string at the specified separator, and returns a list</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">rstrip()</td>
+            <td style="border: 1px solid #dddddd;">Returns a right trim version of the string</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">split()</td>
+            <td style="border: 1px solid #dddddd;">Splits the string at the specified separator, and returns a list</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">splitlines()</td>
+            <td style="border: 1px solid #dddddd;">Splits the string at line breaks and returns a list</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">startswith()</td>
+            <td style="border: 1px solid #dddddd;">Returns true if the string starts with the specified value</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">strip()</td>
+            <td style="border: 1px solid #dddddd;">Returns a trimmed version of the string</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">swapcase()</td>
+            <td style="border: 1px solid #dddddd;">Swaps cases, lower case becomes upper case and vice versa</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">title()</td>
+            <td style="border: 1px solid #dddddd;">Converts the first character of each word to upper case</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">translate()</td>
+            <td style="border: 1px solid #dddddd;">Returns a translated string</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">upper()</td>
+            <td style="border: 1px solid #dddddd;">Converts a string into upper case</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">zfill()</td>
+            <td style="border: 1px solid #dddddd;">Fills the string with a specified number of 0 values at the beginning</td>
+          </tr>
+        </table>
+        
+      </div>
+
+      <!-- Right advertise -->
+      {% include 'layouts/right_advertise.html' %}
+      <!-- Right advertise ends -->
+
+    </div>
+  </div>
+</main>
+{% endblock %}

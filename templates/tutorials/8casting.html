@@ -1,0 +1,51 @@
+{% extends 'layouts/layout.html' %}
+{% block content %}
+{% load static %}
+<!-- Begin page content -->
+<main role="main" class="flex-shrink-0">
+  <div style="padding-left:10px;padding-right: 10px;" class="container-fluid">
+    <div class="row">
+
+      <!-- Left Menu -->
+      {% include 'layouts/left_menu.html' %}
+      <!-- Left Menu ends -->
+
+      <div class="col-md-7 order-md-2">
+
+        <h1 class="display-4">Type Casting</h1>
+
+        <h2>Specify a Variable Type</h2>
+
+        <p>There may be times when you want to specify a type on to a variable. This can be done with
+          casting. Python is an object-orientated language, and as such it uses classes to define
+          data types, including its primitive types.</p>
+
+        <p>Casting in python is therefore done using constructor functions:</p>
+        <ul>
+          <li><code>int</code>  - constructs an integer number from an integer literal, a float literal
+            (by rounding down to the previous whole number), or a string literal (providing the string
+            represents a whole number)</li>
+          <li><code>float</code></li>
+          <li><code>complex</code></li>
+        </ul>
+        
+        
+        <h6>Example 1:</h6>  
+        <p><img src="{% static 'images/casting/casting1.jpg' %}" width="800"></p>
+
+        <h6>Example 2:</h6>  
+        <p><img src="{% static 'images/casting/casting2.jpg' %}" width="800"></p>
+        
+        <h6>Example 3:</h6>  
+        <p><img src="{% static 'images/casting/casting3.jpg' %}" width="800"></p>
+
+      </div>
+
+      <!-- Right advertise -->
+      {% include 'layouts/right_advertise.html' %}
+      <!-- Right advertise ends -->
+
+    </div>
+  </div>
+</main>
+{% endblock %}

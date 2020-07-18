@@ -1,0 +1,62 @@
+{% extends 'layouts/layout.html' %}
+{% block content %}
+{% load static %}
+<!-- Begin page content -->
+<main role="main" class="flex-shrink-0">
+  <div style="padding-left:10px;padding-right: 10px;" class="container-fluid">
+    <div class="row">
+
+      <!-- Left Menu -->
+      {% include 'layouts/left_menu.html' %}
+      <!-- Left Menu ends -->
+
+      <div class="col-md-7 order-md-2">
+
+        <h1 class="display-4">Python Variables</h1>
+
+        <h1>Creating Variables</h1>
+        <p>Variables are containers for storing data values.</p>
+        <p>Unlike other programming languages, Python has no command for declaring a variable.</p>
+        <p>A variable is created the moment you first assign a value to it.</p>
+        <p><img src="{% static 'images/variables/variable1.jpg' %}" width="800"></p>
+
+        <p>Variables do not need to be declared with any particular type and can even change type after they have been
+          set.</p>
+        <p><img src="{% static 'images/variables/variable2.jpg' %}" width="800"></p>
+        
+        <p>String variables can be declared either by using single or double quotes:</p>
+        <p><img src="{% static 'images/variables/variable3.jpg' %}" width="800"></p>
+        
+        <h1>Variable Names</h1>
+        <p>A variable can have a short name (like x and y) or a more descriptive name (age, carname, total_volume). Rules for Python variables:</p>
+        <ul>
+          <li>A variable name must start with a letter or the underscore character</li>
+          <li>A variable name cannot start with a number</li>
+          <li>A variable name can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ )</li>
+          <li>Variable names are case-sensitive (age, Age and AGE are three different variables)</li>
+        </ul>
+        <p><img src="{% static 'images/variables/variable4.jpg' %}" width="800"></p>
+        
+        <h1>Assign Value to Multiple Variables</h1>
+        <p>Python allows you to assign values to multiple variables in one line:</p>
+        <p><img src="{% static 'images/variables/variable5.jpg' %}" width="800"></p>
+        
+        <p>And you can assign the same value to multiple variables in one line:</p>
+        <p><img src="{% static 'images/variables/variable6.jpg' %}" width="800"></p>
+
+        <p>You can also use the + character to add a variable to another variable:</p>
+        <p><img src="{% static 'images/variables/variable7.jpg' %}" width="800"></p>
+        
+        <p style="background-color:rgb(245, 143, 143);">If you try to combine a string and a number, Python will give you an error:</p>
+        <p><img src="{% static 'images/variables/variable8.jpg' %}" width="800"></p>
+
+      </div>
+
+      <!-- Right advertise -->
+      {% include 'layouts/right_advertise.html' %}
+      <!-- Right advertise ends -->
+
+    </div>
+  </div>
+</main>
+{% endblock %}

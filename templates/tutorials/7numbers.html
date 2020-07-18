@@ -1,0 +1,72 @@
+{% extends 'layouts/layout.html' %}
+{% block content %}
+{% load static %}
+<!-- Begin page content -->
+<main role="main" class="flex-shrink-0">
+  <div style="padding-left:10px;padding-right: 10px;" class="container-fluid">
+    <div class="row">
+
+      <!-- Left Menu -->
+      {% include 'layouts/left_menu.html' %}
+      <!-- Left Menu ends -->
+
+      <div class="col-md-7 order-md-2">
+
+        <h1 class="display-4">Deal with Numbers in Python</h1>
+
+        <p>There are three numeric types in Python:</p>
+        <ul>
+          <li><code>int</code></li>
+          <li><code>float</code></li>
+          <li><code>complex</code></li>
+        </ul>
+        
+        <p>Variables of numeric types are created when you assign a value to them:</p>
+        <h6>Example:</h6>  
+        <p><img src="{% static 'images/numbers/num1.jpg' %}" width="800"></p>
+
+
+        <p>To verify the type of any object in Python, use the <code>type()</code> function:</p>
+        <h6>Example:</h6>
+        <p><img src="{% static 'images/numbers/num2.jpg' %}" width="800"></p>
+        
+        <h1>Int</h1>  
+        <p>Int, or integer, is a whole number, positive or negative, without decimals, of unlimited length.</p>
+        <h6>Example:</h6>
+        <p><img src="{% static 'images/numbers/num3.jpg' %}" width="800"></p>
+        
+        <h1>Float</h1>  
+        <p>Float, or "floating point number" is a number, positive or negative, containing one or more decimals.</p>
+        <h6>Example:</h6>
+        <p><img src="{% static 'images/numbers/num4.jpg' %}" width="800"></p>
+        <br>  
+
+        <p>Float can also be scientific numbers with an "e" to indicate the power of 10.</p>
+        <h6>Example:</h6>
+        <p><img src="{% static 'images/numbers/num5.jpg' %}" width="800"></p>
+        
+        <h1>Complex</h1>  
+        <p>Complex numbers are written with a "j" as the imaginary part:</p>
+        <h6>Example:</h6>
+        <p><img src="{% static 'images/numbers/num6.jpg' %}" width="800"></p>
+
+        <h1>Type Conversion</h1>  
+        <p>You can convert from one type to another with the int(), float(), and complex() methods:</p>
+        <h6>Example:</h6>
+        <p><img src="{% static 'images/numbers/num7.jpg' %}" width="800"></p>
+       
+        <h1>Random Number</h1>  
+        <p>Python does not have a <code>random()</code> function to make a random number, but Python has a built-in module called random that can be used to make random numbers:</p>
+        <h6>Example:</h6>
+        <p><img src="{% static 'images/numbers/num8.jpg' %}" width="800"></p>
+      
+      </div>
+
+      <!-- Right advertise -->
+      {% include 'layouts/right_advertise.html' %}
+      <!-- Right advertise ends -->
+
+    </div>
+  </div>
+</main>
+{% endblock %}

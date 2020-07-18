@@ -1,0 +1,1 @@
+web: gunicorn Khata_Register.wsgi --log-file - 

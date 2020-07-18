@@ -1,0 +1,50 @@
+{% extends 'layouts/layout.html' %}
+{% block content %}
+{% load static %}
+<!-- Begin page content -->
+<main role="main" class="flex-shrink-0">
+  <div style="padding-left:10px;padding-right: 10px;" class="container-fluid">
+    <div class="row">
+      
+      <!-- Left Menu -->
+      {% include 'layouts/left_menu.html' %}
+      <!-- Left Menu ends -->      
+      
+      <div class="col-md-7 order-md-2">
+
+        <h1 class="display-4">Lets run first Python Program</h1>
+        <p class="lead">
+        <h1>1. Run Python in Immediate mode.</h1>
+        <p>Once Python is installed, typing python in the command line will invoke the interpreter in immediate mode. We
+          can directly type in Python code, and press Enter to get the output.</p>
+        <p><img src="{% static 'images/first_program/open_in_cmd.jpg' %}" width="800"></p>
+        <p>Try typing in 5 + 4 and press enter. We get 9 as the output. This prompt can be used as a calculator. To exit
+          this mode, type quit() and press enter.</p>
+        <p><img src="{% static 'images/first_program/python_as_calculator.jpg' %}" width="800"></p>
+        <p>Run Python in the Integrated Development Environment (IDE)</p>
+        <p>We can use any text editing software to write a Python script file.</p>
+        <p>We just need to save it with the .py extension. But using an IDE can make our life a lot easier. IDE is a
+          piece of software that provides useful features like code hinting, syntax highlighting and checking, file
+          explorers, etc. to the programmer for application development.</p>
+        <p>By the way, when you install Python, an IDE named IDLE is also installed. You can use it to run Python on
+          your computer. It's a decent IDE for beginners.</p>
+        <p>When you open IDLE, an interactive Python Shell is opened.</p>
+        <p><img src="{% static 'images/first_program/open_in_idle.jpg' %}" width="800"></p>
+        <p>Now lets print something by typing command & We"ll get output.</p>
+        <p><img src="{% static 'images/first_program/print_text.jpg' %}" width="800"></p>
+        <p>Now you can create a new file and save it with .py extension. For example, learn.py</p>
+        <p>Write Python code in the file and save it. To run the file, go to Run > Run Module or simply click F5.</p>
+        <p><img src="{% static 'images/first_program/run_learn_file.jpg' %}" width="800"></p>
+        <p>And you will see the output.</p>
+        <p><img src="{% static 'images/first_program/learn_file_output.jpg' %}" width="800"></p>
+
+      </div>
+
+<!-- Right advertise -->
+{% include 'layouts/right_advertise.html' %}
+<!-- Right advertise ends -->
+
+    </div>
+  </div>
+</main>
+{% endblock %}

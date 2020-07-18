@@ -1,0 +1,100 @@
+{% extends 'layouts/layout.html' %}
+{% block content %}
+{% load static %}
+<!-- Begin page content -->
+<main role="main" class="flex-shrink-0">
+  <div style="padding-left:10px;padding-right: 10px;" class="container-fluid">
+    <div class="row">
+
+      <!-- Left Menu -->
+      {% include 'layouts/left_menu.html' %}
+      <!-- Left Menu ends -->
+
+      <div class="col-md-7 order-md-2">
+
+        <h1 class="display-4">Boolean Values</h1>
+
+        <h5>Booleans represent one of two values: <code>True</code> or <code>False</code>.</h5>
+      
+        <p>In programming you often need to know if an expression is <code>True</code> or <code>False</code>.</p>
+        <p>You can evaluate any expression in Python, and get one of two answers, <code>True</code> or <code>False</code>.</p>
+        <p>When you compare two values, the expression is evaluated and Python returns the Boolean answer:</p>
+        
+        <h6>Example</h6>
+       
+        <p><img src="{% static 'images/booleans/1.jpg' %}" width="800"></p>
+
+        <p>When you run a condition in an if statement, Python returns True or False:</p>
+        
+        <h6>Example</h6>
+       <span>Print a message based on whether the condition is <code>True</code> or <code>False</code>:</span>
+        <p><img src="{% static 'images/booleans/2.jpg' %}" width="800"></p>
+
+        <h1 class="display-4">Evaluate Values and Variables</h1>
+        <p>The bool() function allows you to evaluate any value, and give you  <code>True</code> or <code>False</code> in return,.</p>
+        
+        <h6>Example</h6>
+       <span>Evaluate a string and a number:</span>
+        <p><img src="{% static 'images/booleans/3.jpg' %}" width="800"></p>
+
+        <h6>Example</h6>
+        <span>Evaluate two variables:</span>
+        <p><img src="{% static 'images/booleans/4.jpg' %}" width="800"></p>
+
+        <h1 class="display-4">Most Values are True</h1>
+        <p>Almost any value is evaluated to <code>True</code> if it has some sort of content.</p>
+        <p>Any string is <code>True</code>, except empty strings.</p>
+        <p>Any number is <code>True</code>, except <code>0</code>.</p>
+        <p>Any list, tuple, set, and dictionary are <code>True</code>, except empty ones.</p>
+
+        <h6>Example</h6>
+        <span>The following will return True:</span>
+        <p><img src="{% static 'images/booleans/5.jpg' %}" width="800"></p>
+
+        <h1 class="display-4">Some Values are False</h1>
+        <p>In fact, there are not many values that evaluates to <code>False</code>, except empty values, such as <code>()</code>, <code>[]</code>, <code>{}</code>, <code>""</code>, the number <code>0</code>, and the value <code>None</code>. And of course the value <code>False</code> evaluates to <code>False</code>.</p>
+        
+        <h6>Example</h6>
+       <span>The following will return False:</span>
+        <p><img src="{% static 'images/booleans/6.jpg' %}" width="800"></p>
+
+        <p>One more value, or object in this case, evaluates to <code>False</code>, and that is if you have an object that is made from a class with a <code>__len__</code> function that returns <code>0</code> or <code>False</code>>:</p>
+
+        <h6>Example</h6>
+       
+        <p><img src="{% static 'images/booleans/7.jpg' %}" width="800"></p>
+
+        <h1 class="display-4">Functions can Return a Boolean</h1>
+        <p>You can create functions that returns a Boolean Value:</p>
+        
+        <h6>Example</h6>
+       <span>Print the answer of a function:</span>
+        <p><img src="{% static 'images/booleans/8.jpg' %}" width="800"></p>
+
+        <p>You can execute code based on the Boolean answer of a function:</p>
+        
+        <h6>Example</h6>
+       <span>Print "YES!" if the function returns True, otherwise print "NO!":</span>
+        <p><img src="{% static 'images/booleans/9.jpg' %}" width="800"></p>
+
+        <p>Python also has many built-in functions that returns a boolean value, like the <code>isinstance()</code> function, which can be used to determine if an object is of a certain data type:</p>
+        
+        <h6>Example</h6>
+       <span>Check if an object is an integer or not:</span>
+        <p><img src="{% static 'images/booleans/10.jpg' %}" width="800"></p>
+
+        <h1 class="display-4">Exercise:</h1>
+        <h5>The statement below would print a Boolean value, which one? Write your answer in the comment section below</h5>
+        <p><img src="{% static 'images/booleans/11.jpg' %}" width="800"></p>
+
+
+      </div>
+
+      <!-- Right advertise -->
+      {% include 'layouts/right_advertise.html' %}
+      <!-- Right advertise ends -->
+
+    </div>
+  </div>
+</main>
+{% endblock %}

@@ -1,0 +1,192 @@
+{% extends 'layouts/layout.html' %}
+{% block content %}
+{% load static %}
+<!-- Begin page content -->
+<main role="main" class="flex-shrink-0">
+  <div style="padding-left:10px;padding-right: 10px;" class="container-fluid">
+    <div class="row">
+
+      <!-- Left Menu -->
+      {% include 'layouts/left_menu.html' %}
+      <!-- Left Menu ends -->
+
+      <div class="col-md-7 order-md-2">
+
+        <h1 class="display-4">Python Data Types</h1>
+
+        <h1>Built-in Data Types</h1>
+        <p>In programming, data type is an important concept.</p>
+        <p>Variables can store data of different types, and different types can do different things.</p>
+        <p>Python has the following data types built-in by default, in these categories:</p>
+        <div class="row">
+          <div class="col-md-2 order-md-1">
+            <p>Text Type: </p>
+            <p>Numeric Types: </p>
+            <p>Sequence Types: </p>
+            <p>Mapping Type: </p>
+            <p>Set Types: </p>
+            <p>Boolean Type: </p>
+            <p>Binary Types: </p>
+          </div>
+          <div class="col-md-4 order-md-2">
+            <p><code>str</code></p>
+            <p><code>int, float, complex</code></p>
+            <p><code>list, tuple, range</code></p>
+            <p><code>dict</code></p>
+            <p><code>set, frozenset</code></p>
+            <p><code>bool</code></p>
+            <p><code>bytes, bytearray, memoryview</code></p>
+          </div>
+        </div>
+        <br>  
+
+        <h1>Getting the Data Type</h1>
+        <p>You can get the data type of any object by using the <code>type()</code> function:</p>
+
+        <h6>Example</h6>
+        <p>Print the data type of the variable x:</p>
+        <p><img src="{% static 'images/data_types/example.jpg' %}" width="800"></p>
+
+        <h1>Setting the Data Type</h1>
+        <p>In Python, the data type is set when you assign a value to a variable:</p>
+
+        <table>
+          <tr>
+            <th style="width: 10%;border: 1px solid #dddddd;">Example</th>
+            <th style="width: 10%;border: 1px solid #dddddd;">Data Type</th>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">x = "Hello World"</td>
+            <td style="border: 1px solid #dddddd;">str</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">x = 20</td>
+            <td style="border: 1px solid #dddddd;">int</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">x = 20.5</td>
+            <td style="border: 1px solid #dddddd;">float</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">x = "1j"</td>
+            <td style="border: 1px solid #dddddd;">complex</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">x = ["apple", "banana", "cherry"]</td>
+            <td style="border: 1px solid #dddddd;">list</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">x = ("apple", "banana", "cherry")</td>
+            <td style="border: 1px solid #dddddd;">tuple</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">x = range(6)</td>
+            <td style="border: 1px solid #dddddd;">range</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">x = {"name" : "John", "age" : 36}</td>
+            <td style="border: 1px solid #dddddd;">dict</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">x = {"apple", "banana", "cherry"}</td>
+            <td style="border: 1px solid #dddddd;">set</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">x = frozenset({"apple", "banana", "cherry"})</td>
+            <td style="border: 1px solid #dddddd;">frozenset</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">x = True</td>
+            <td style="border: 1px solid #dddddd;">bool</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">x = b"Hello"</td>
+            <td style="border: 1px solid #dddddd;">bytes</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">x = bytearray(5)</td>
+            <td style="border: 1px solid #dddddd;">bytearray</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">x = memoryview(bytes(5))</td>
+            <td style="border: 1px solid #dddddd;">memoryview</td>
+          </tr>
+        </table>
+        <br>
+        <h1>Setting the Specific Data Type</h1>
+        <p>If you want to specify the data type, you can use the following constructor functions:</p>
+      
+        <table>
+          <tr>
+            <th style="width: 10%;border: 1px solid #dddddd;">Example</th>
+            <th style="width: 10%;border: 1px solid #dddddd;">Data Type</th>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">x = str("Hello World")</td>
+            <td style="border: 1px solid #dddddd;">str</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">x = int(20)</td>
+            <td style="border: 1px solid #dddddd;">int</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">x = float(20.5)</td>
+            <td style="border: 1px solid #dddddd;">float</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">x = complex(1j)</td>
+            <td style="border: 1px solid #dddddd;">complex</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">x = list(("apple", "banana", "cherry"))</td>
+            <td style="border: 1px solid #dddddd;">list</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">x = tuple(("apple", "banana", "cherry"))</td>
+            <td style="border: 1px solid #dddddd;">tuple</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">x = range(6)</td>
+            <td style="border: 1px solid #dddddd;">range</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">x = dict(name="John", age=36)</td>
+            <td style="border: 1px solid #dddddd;">dict</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">x = set(("apple", "banana", "cherry"))</td>
+            <td style="border: 1px solid #dddddd;">set</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">x = frozenset(("apple", "banana", "cherry"))</td>
+            <td style="border: 1px solid #dddddd;">frozenset</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">x = bool(5)</td>
+            <td style="border: 1px solid #dddddd;">bool</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">x = bytes(5)</td>
+            <td style="border: 1px solid #dddddd;">bytes</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">x = bytearray(5)</td>
+            <td style="border: 1px solid #dddddd;">bytearray</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #dddddd;">x = memoryview(bytes(5))</td>
+            <td style="border: 1px solid #dddddd;">memoryview</td>
+          </tr>
+        </table>
+        <br>
+      
+      </div>
+
+      <!-- Right advertise -->
+      {% include 'layouts/right_advertise.html' %}
+      <!-- Right advertise ends -->
+
+    </div>
+  </div>
+</main>
+{% endblock %}

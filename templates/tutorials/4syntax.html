@@ -1,0 +1,55 @@
+{% extends 'layouts/layout.html' %}
+{% block content %}
+{% load static %}
+<!-- Begin page content -->
+<main role="main" class="flex-shrink-0">
+  <div style="padding-left:10px;padding-right: 10px;" class="container-fluid">
+    <div class="row">
+
+      <!-- Left Menu -->
+      {% include 'layouts/left_menu.html' %}
+      <!-- Left Menu ends -->
+
+      <div class="col-md-7 order-md-2">
+
+        <h1 class="display-4">Python Syntax</h1>
+       
+        <h1>Python Indentation</h1>
+        <p>Indentation refers to the spaces at the beginning of a code line.</p>
+        <p>Where in other programming languages the indentation in code is for readability only, the indentation in
+          Python is very important.</p>
+        <p>Python uses indentation to indicate a block of code.</p>
+
+        <p><img src="{% static 'images/syntax/indentation1.jpg' %}" width="800"></p>
+
+        <p>Python will give you an error if you skip the indentation.</p>
+        <p><img src="{% static 'images/syntax/indentation2.jpg' %}" width="800"></p>
+        
+        <h1>Comments</h1>
+
+        <p>Python has commenting capability for the purpose of in-code documentation.
+          Comments start with a #, and Python will render the rest of the line as a comment:</p>
+        <p>Comments can be used to explain Python code.</p>
+        <p>Comments can be used to make the code more readable.</p>
+        <p>Comments can be used to prevent execution when testing code.</p>
+          <p><img src="{% static 'images/syntax/comment.jpg' %}" width="800"></p>
+        <h1>Multi Line Comments</h1>
+        <p>Python does not really have a syntax for multi line comments.<br>
+          To add a multiline comment you could insert a # for each line:</p> 
+          <p><img src="{% static 'images/syntax/multiline_comment1.jpg' %}" width="800"></p>
+        <p>Or, not quite as intended, you can use a multiline string.</p>
+
+          <p>Since Python will ignore string literals that are not assigned to a variable,
+          you can add a multiline string (triple quotes) in your code, and place your
+          comment inside it</p>
+          <p><img src="{% static 'images/syntax/multiline_comment2.jpg' %}" width="800"></p>
+        </div>
+
+      <!-- Right advertise -->
+      {% include 'layouts/right_advertise.html' %}
+      <!-- Right advertise ends -->
+
+    </div>
+  </div>
+</main>
+{% endblock %}

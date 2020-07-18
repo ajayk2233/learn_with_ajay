@@ -1,0 +1,52 @@
+{% extends 'layouts/layout.html' %}
+{% block content %}
+{% load static %}
+<!-- Begin page content -->
+<main role="main" class="flex-shrink-0">
+  <div style="padding-left:10px;padding-right: 10px;" class="container-fluid">
+    <div class="row">
+
+      <!-- Left Menu -->
+        {% include 'layouts/left_menu.html' %}
+      <!-- Left Menu ends -->      
+      
+      <div class="col-md-7 order-md-2">
+
+        <h1 class="display-4">Download & Install Python</h1>
+        <p class="lead">
+        <h1>Follow the instruction to download latest version of python.</h1>
+        <p>1. Click <a href="https://www.python.org/downloads/">here</a> to go to the Official website & follow the
+          steps</p>
+
+        <p><img src="{% static 'images/installation/download.jpg' %}" width="800"></p>
+
+        <p>2. click on <label style="background-color: yellow;">Download Python 3.8.3</label> to download it for
+          Windows.<br>You can find the link to download it for Mac/Linux.</p>
+        <p>3. Find the file in your standard download folder & open it.</p>
+        <p><img src="{% static 'images/installation/python_file.jpg' %}"></p>
+        <p>The following window will appear.</p>
+        <p>4. Click Install Now.</p>
+        <p><img src="{% static 'images/installation/enable_add_path.png' %}"></p>
+        <p>A new Python 3.8.3 (64-bit) Setup pop-up window will appear with a Setup Progress message and a progress bar.
+        </p>
+        <p><img src="{% static 'images/installation/installation_progress.jpg' %}"></p>
+        <p>5. Now click on Close.</p>
+        <p><img src="{% static 'images/installation/installation_successful.jpg' %}"></p>
+
+        <p>You have successfully installed Python in your computer.</p>
+        <p>6. Lets check whether installation went correctly.</p>
+        <p>Goto CMD (press windows + r combination keys) & type python --version</p>
+
+        <p><img src="{% static 'images/installation/verify_in_cmd.jpg' %}"></p>
+        <p>if you see the version shown in above image then Congratulations... You have done with Installation.</p>
+
+      </div>
+     
+<!-- Right advertise -->
+{% include 'layouts/right_advertise.html' %}
+<!-- Right advertise ends -->
+   
+    </div>
+  </div>
+</main>
+{% endblock %}
